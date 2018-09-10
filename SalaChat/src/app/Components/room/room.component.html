@@ -1,0 +1,24 @@
+
+
+<p>Salas</p>
+<div class="row">
+<div class="SalaView">
+<ul class="list-group" *ngFor="let room of rooms">
+    <li class="list-group-item" (click)="setActualRoom(room)">{{room.name}}</li>
+</ul>
+</div>
+
+
+    <div *ngIf="actualRoom" class="ChatView">
+
+        <div class="MsjView">
+            <app-message-list [actualRoom]="actualRoom"></app-message-list>
+        </div>
+        <div class="MsjBarView">
+            <app-message-from [actualRoom]="actualRoom" [actualUserMsj]="actualUserRoom"></app-message-from>
+        </div>
+
+    </div>
+
+
+</div>

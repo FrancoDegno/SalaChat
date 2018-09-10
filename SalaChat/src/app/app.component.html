@@ -1,0 +1,2 @@
+<app-user (usserLogged)="createUser($event)" *ngIf="!newUser"></app-user>
+<app-room *ngIf="newUser" [actualUserRoom]="newUser"></app-room>
