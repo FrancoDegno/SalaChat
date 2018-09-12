@@ -1,10 +1,18 @@
 
 
 <p>Salas</p>
+
+<form>
+    New Room:<br>
+    <input type="text" name="newSala" [(ngModel)]="newSalaName" [ngModelOptions]="{standalone: true}"><br>
+    <button type="button" class="btn btn-primary" (click)="createRoom()">Create new Room</button>
+</form>
+
 <div class="row">
-<div class="SalaView">
+
+<div class="SalaView scrollV">
 <ul class="list-group" *ngFor="let room of rooms">
-    <li class="list-group-item" (click)="setActualRoom(room)">{{room.name}}</li>
+    <li class="list-group-item list-group-item-action list-group-item-info" (click)="setActualRoom(room)">{{room.name}}</li>
 </ul>
 </div>
 
